@@ -1,9 +1,9 @@
-class Minion extends ExtendableSprite{
+class Minion extends sprites.ExtendableSprite{
 
     speed: number = 20;
     gravityStrenght: number = 120;
-    walkRightAnim: assets.animation = assets.animation`walk right`
-    walkLeftAnim: assets.animation = assets.animation`walk left`
+    walkRightAnim: Image[] = assets.animation`walk right`
+    walkLeftAnim: Image[] = assets.animation`walk left`
 
 
     constructor() {

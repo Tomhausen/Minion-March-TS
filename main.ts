@@ -4,7 +4,7 @@ namespace SpriteKind {
 
 //  variables
 
-let levelManager = new LevelManager()
+let levelManager = new LevelLoader()
 
 //  sprites
 let cursor = sprites.create(image.create(2, 2));
@@ -42,7 +42,7 @@ browserEvents.MouseLeft.onEvent(browserEvents.MouseButtonEvent.Pressed, function
 })
 
 function minion_movement() {
-    sprites.allOfKind(SpriteKind.Player).forEach((minion: Sprite) => {
+    sprites.allOfKind(SpriteKind.Player).forEach((minion: Minion) => {
         minion.movement()
     })
 }

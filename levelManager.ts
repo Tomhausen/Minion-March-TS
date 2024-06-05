@@ -1,6 +1,6 @@
 class LevelLoader{
 
-    levels: tiles.TileMapData = [
+    levels: tiles.TileMapData[] = [
         assets.tilemap`level 1`,
         assets.tilemap`level 2`,
         assets.tilemap`level 3`,
