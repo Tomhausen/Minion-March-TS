@@ -42,7 +42,7 @@ class LevelLoader{
         }
     }
 
-    private spawnMinions() {
+    private spawnMinions(): void {
         this.spawningPhase = true;
         pause(1250);
         for (let i = 0; i < this.waveSize; i++) {
@@ -54,7 +54,7 @@ class LevelLoader{
         this.spawningPhase = false;
     }
 
-    public minionEscapes() {
+    public minionEscapes(): void {
         this.escapedMinions ++;
     }
 
@@ -75,6 +75,4 @@ class LevelLoader{
             this.resetLevel()
         })
     }
-
-
 }

@@ -1,32 +1,29 @@
 namespace SpriteKind {
     export const collider = SpriteKind.create();
+    export const mouse = SpriteKind.create();
 }
 
 class GameManager{
 
-    levelLoader: LevelLoader;
-    mouseManager: MouseManager;
+    mouse: Mouse;
 
     constructor() {
-        let cursor = sprites.create(image.create(2, 2));
-        this.levelLoader = new LevelLoader();
-        this.mouseManager = new MouseManager(cursor);
-        new EventHandlerManager(this.levelLoader);
+        this.mouse = new Mouse();
+        new EventHandlerManager(new LevelLoader());
         this.setupGameLoops()
     }
 
-    private minionMovement() {
+    private minionMovement(): void {
         sprites.allOfKind(SpriteKind.Player).forEach((minion: Minion) => {
             minion.movement()
         })
     }
     
-    private setupGameLoops() {
+    private setupGameLoops(): void {
         game.onUpdate( () => {
-            this.mouseManager.cursorPositioning();
-            this.mouseManager.cameraMovement();
+            mouse.cursorPositioning();
+            mouse.cameraMovement();
             this.minionMovement();
         })
     }
-
 }

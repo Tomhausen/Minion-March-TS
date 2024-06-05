@@ -2,7 +2,7 @@ class EventHandlerManager {
 
     levelLoader: LevelLoader;
 
-    constructor(levelLoader: LevelLoader) {
+    constructor(levelLoader: LevelLoader): void {
         this.initialiseWallOverlaps();
         this.initialOnDestroy();
         this.levelLoader = levelLoader;
