@@ -23,8 +23,8 @@ class GameManager{
     
     private setupGameLoops() {
         game.onUpdate( () => {
-            mouseManager.cursorPositioning();
-            mouseManager.cameraMovement();
+            this.mouseManager.cursorPositioning();
+            this.mouseManager.cameraMovement();
             this.minionMovement();
         })
     }

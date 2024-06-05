@@ -59,14 +59,14 @@ class LevelLoader{
     }
 
     public minionDestroyed(): void {
-        if (this.escaped_minions > 3) {
+        if (this.escapedMinions > 3) {
             if (this.level > this.levels.length - 1) {
                 game.over(true);
             } else {
-                this.next_level();
+                this.nextLevel();
             }
         } else {
-            this.reset_level();
+            this.resetLevel();
         }
     }
 
