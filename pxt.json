@@ -21,7 +21,11 @@
         "tilemap.g.jres",
         "tilemap.g.ts",
         "images.g.jres",
-        "images.g.ts"
+        "images.g.ts",
+        "eventHandlerManager.ts",
+        "levelManager.ts",
+        "minions.ts",
+        "mouseManager.ts"
     ],
     "testFiles": [
         "test.ts"
