@@ -13,17 +13,14 @@
         "Browser Events Advanced": "github:tomhausen/browser-events-advanced#v0.0.5"
     },
     "files": [
-        "main.blocks",
         "main.ts",
-        "README.md",
         "assets.json",
-        "main.py",
         "tilemap.g.jres",
         "tilemap.g.ts",
         "images.g.jres",
         "images.g.ts",
         "eventHandlerManager.ts",
-        "levelManager.ts",
+        "levelLoader.ts",
         "minions.ts",
         "mouseManager.ts",
         "gameManager.ts"
