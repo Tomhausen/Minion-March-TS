@@ -1,15 +1,15 @@
 class LevelLoader{
 
-    levels: tiles.TileMapData[] = [
+    private levels: tiles.TileMapData[] = [
         assets.tilemap`level 1`,
         assets.tilemap`level 2`,
         assets.tilemap`level 3`,
         assets.tilemap`level 4`
     ];
-    level: number = -1;
-    escapedMinions: number = 0;
-    waveSize: number = 14;
-    spawningPhase: boolean = false;
+    private level: number = -1;
+    private escapedMinions: number = 0;
+    private waveSize: number = 14;
+    private spawningPhase: boolean = false;
 
     constructor() {
         this.nextLevel();
@@ -52,6 +52,22 @@ class LevelLoader{
         }
         music.powerUp.play();
         this.spawningPhase = false;
+    }
+
+    public minionEscapes() {
+        this.escapedMinions ++;
+    }
+
+    public minionDestroyed(): void {
+        if (this.escaped_minions > 3) {
+            if (this.level > this.levels.length - 1) {
+                game.over(true);
+            } else {
+                this.next_level();
+            }
+        } else {
+            this.reset_level();
+        }
     }
 
     private intialiseReloadInput(): void{
