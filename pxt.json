@@ -25,7 +25,8 @@
         "eventHandlerManager.ts",
         "levelManager.ts",
         "minions.ts",
-        "mouseManager.ts"
+        "mouseManager.ts",
+        "gameManager.ts"
     ],
     "testFiles": [
         "test.ts"
